@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&family=Marcellus&family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --font-family-italiana: "Italiana", serif;
+  --font-family-marcellus: "Marcellus", serif;
+  --font-family-mulish: "Mulish", sans-serif;
+  --font-family-work-sans: "Work Sans", sans-serif;
+  --bg-white: #e5dddf;
+  --black: #191825;
+  --blue: #865dff;
+  --purple1: #e384ff;
+  --purple2: #ffa3fd;
+}
+
+
+
+html,body,#root,.app {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-family-work-sans);
+  /* background: var(--black); */
+}
