@@ -41,10 +41,10 @@ app.use(bodyParser.urlencoded({limit:"30mb",extended:true}));
 //enabling CORS for all requests
 
 app.use(cors(
-    // {
-    //     origin:[`http//localhost:${process.env.PORT}`],
-    //     methods:["GET", "POST", "PATCH"],
-    // }
+    {
+        origin:[`https://social-pvx3.onrender.com`],
+        methods:["GET", "POST", "PATCH"],
+    }
 ));
 
 app.use("/assets", express.static(path.join(__dirname, 'public/assets')));
