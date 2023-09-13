@@ -15,6 +15,7 @@ const ProfilePage = () => {
   const {userId} = useParams();
   const token = useSelector((state) => state.token);
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)")
+  // const BASE_URL = process.env.BASE_URL;
   // const { _id, picturePath } = useSelector((state) => state.user);
 
   const getUser = async() => {
