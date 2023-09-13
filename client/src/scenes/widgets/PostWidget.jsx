@@ -42,9 +42,10 @@ const PostWidget = ({
   const { palette } = useTheme();
   const primary = palette.primary.purple;
   const main = palette.neutral.main;
+  const BASE_URL = process.env.REACTBASE_URL
 
   const patchLike = async () => {
-    const response = await fetch(`http://localhost:3001/posts/${postId}/like`, {
+    const response = await fetch(`${BASE_URL}/posts/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -74,7 +75,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`http://localhost:3001/assets/${picturePath}`}
+          src={`${BASE_URL}/assets/${picturePath}`}
         />
       )}
       <FlexBetween mt="0.25rem">

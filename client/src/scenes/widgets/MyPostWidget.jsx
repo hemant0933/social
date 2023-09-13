@@ -38,6 +38,7 @@ const MyPostWidget = ({ picturePath }) => {
   const medium = palette.neutral.medium;
   const primaryLight = palette.primary.dark;
   const primaryPurple = palette.primary.purple;
+  const BASE_URL = process.env.REACTBASE_UR;
 
   const handlePost = async () => {
     const formData = new FormData();
@@ -47,7 +48,7 @@ const MyPostWidget = ({ picturePath }) => {
       formData.append("picture", image);
       formData.append("picturePath", image.name);
     }
-    const response = await fetch('http://localhost:3001/posts', {
+    const response = await fetch(`${BASE_URL}/posts`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
