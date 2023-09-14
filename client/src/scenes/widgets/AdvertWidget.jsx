@@ -9,7 +9,7 @@ const AdvertWidget = () => {
     const dark = palette.neutral.dark;
     const main = palette.neutral.main;
     const medium = palette.neutral.medium;
-    const BASE_URL = process.env.REACTBASE_URL;
+    // const BASE_URL ="https://social-pvx3.onrender.com";
     
 
   return (
@@ -24,7 +24,7 @@ const AdvertWidget = () => {
         width="100%"
         height="auto"
         alt='advert'
-        src={`${BASE_URL}/assets/info4.jpeg`}
+        src={`https://backend-fuhg.onrender.com/assets/info4.jpeg`}
         style={{borderRadius:"0.75rem",margin:"0.75rem 0"}}
       />
       <FlexBetween>

@@ -8,10 +8,10 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const posts = useSelector((state) => state.posts);
   const token = useSelector((state) => state.token);
 
-  const BASE_URL = process.env.REACTBASE_URL;
+  // const BASE_URL = process.env.REACTBASE_URL;
 
   const getPosts = async () => {
-    const response = await fetch(`${BASE_URL}/posts`, {
+    const response = await fetch(`https://backend-fuhg.onrender.com/posts`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -21,7 +21,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   const getUserPosts = async () => {
     const response = await fetch(
-      `${BASE_URL}/posts/${userId}/posts`,
+      `https://backend-fuhg.onrender.com/posts/${userId}/posts`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

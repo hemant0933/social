@@ -10,11 +10,11 @@ const FriendListWidget = ({ userId }) => {
   const { palette } = useTheme();
   const token = useSelector((state) => state.token);
   const friends = useSelector((state) => state.user.friends);
-  const BASE_URL = process.env.REACTBASE_URL;
+  // const BASE_URL ="https://social-pvx3.onrender.com";
 
   const getFriends = async () => {
     const response = await fetch(
-      `${BASE_URL}/users/${userId}/friends`,
+      `https://backend-fuhg.onrender.com/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

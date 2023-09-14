@@ -55,7 +55,7 @@ const Form = () => {
   const isNonMobile = useMediaQuery("(min-width: 600px)");
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
-  // const BASE_URL = process.env.REACTBASE_URL;
+  // const BASE_URL ="https://backend-fuhg.onrender.com";
 
   const handleFormSubmit = async (values, onSubmitProps) => {
     if (isLogin) await login(values, onSubmitProps);
@@ -70,7 +70,7 @@ const Form = () => {
     }
     formData.append("picturePath", values.picture.name);
 
-    const savedUserResponse = await fetch('http://localhost:3001/auth/register', {
+    const savedUserResponse = await fetch(`https://backend-fuhg.onrender.com/auth/register`, {
       method: "POST",
       body: formData,
     });
@@ -84,7 +84,7 @@ const Form = () => {
   };
   const login = async (values, onSubmitProps) => {
     //
-    const loggedInResponse = await fetch("http://localhost:3001/auth/login", {
+    const loggedInResponse = await fetch(`https://backend-fuhg.onrender.com/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),

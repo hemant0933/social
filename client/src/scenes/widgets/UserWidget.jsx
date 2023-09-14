@@ -24,10 +24,10 @@ const UserWidget = ({ userId, picturePath }) => {
   const dark = palette.neutral.dark;
   const medium = palette.neutral.medium;
   const main = palette.neutral.main;
-  const BASE_URL = process.env.REACTBASE_URL
+  // const BASE_URL = process.env.REACTBASE_URL
 
   const getUser = async () => {
-    const response = await fetch(`${BASE_URL}/users/${userId}`, {
+    const response = await fetch(`https://backend-fuhg.onrender.com/users/${userId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });

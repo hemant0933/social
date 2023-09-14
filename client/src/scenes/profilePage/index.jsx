@@ -15,11 +15,11 @@ const ProfilePage = () => {
   const {userId} = useParams();
   const token = useSelector((state) => state.token);
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)")
-  const BASE_URL = process.env.REACTBASE_URL;
+  // const BASE_URL ="https://social-pvx3.onrender.com";
   // const { _id, picturePath } = useSelector((state) => state.user);
 
   const getUser = async() => {
-    const response = await fetch(`${BASE_URL}/users/${userId}`, {
+    const response = await fetch(`https://backend-fuhg.onrender.com/users/${userId}`, {
       method: "GET",
       headers: {Authorization:`Bearer ${token}`}
     })

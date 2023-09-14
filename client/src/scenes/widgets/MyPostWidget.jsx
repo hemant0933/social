@@ -38,7 +38,7 @@ const MyPostWidget = ({ picturePath }) => {
   const medium = palette.neutral.medium;
   const primaryLight = palette.primary.dark;
   const primaryPurple = palette.primary.purple;
-  const BASE_URL = process.env.REACTBASE_UR;
+  // const BASE_URL = "https://social-pvx3.onrender.com";
 
   const handlePost = async () => {
     const formData = new FormData();
@@ -48,7 +48,7 @@ const MyPostWidget = ({ picturePath }) => {
       formData.append("picture", image);
       formData.append("picturePath", image.name);
     }
-    const response = await fetch(`${BASE_URL}/posts`, {
+    const response = await fetch(`https://backend-fuhg.onrender.com/posts`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
