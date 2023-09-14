@@ -40,9 +40,7 @@ app.use(bodyParser.urlencoded({limit:"30mb",extended:true}));
 
 //enabling CORS for all requests
 app.use(cors({
-    origin: ['https://social-kjaw-pux6adbmh-hemant0933.vercel.app/'],
-    optionsSuccessStatus: 200,
-    credentials: true
+    origin:'*'
   }));
   
   
