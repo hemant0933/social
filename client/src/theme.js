@@ -1,10 +1,12 @@
-// export const colorTokens2 = {
-//   bgWhite: "#e5dddf",
-//   black: "#191825",
-//   blue: "#865dff",
-//   purple1: "#e384ff",
-//   purple2: "#ffa3fd",
-// }
+export const colorTokens2 = {
+  bgWhite: "#e5dddf",
+  black: "#191825",
+  blue: "#865dff",
+  purple1: "#e384ff",
+  purple2: "#ffa3fd",
+  purple3:"#6554AF",
+  purple4:"#9575DE",
+}
 
 export const fontTokens = {
   italiana: "Italiana, serif",
@@ -25,7 +27,7 @@ export const colorTokens = {
     500: "#666666",
     600: "#4D4D4D",
     700: "#333333",
-    800: "#1A1A1A",
+    800: "#2B2730",
     900: "#0A0A0A",
     1000: "#000000",
   },
@@ -66,10 +68,12 @@ export const themeSettings = (mode) => {
               mediumMain: colorTokens.grey[300],
               medium: colorTokens.grey[400],
               light: colorTokens.grey[700],
+              purple:colorTokens2.purple3,
             },
             background: {
               default: colorTokens.grey[900],
               alt: colorTokens.grey[800],
+              ctrl:colorTokens2.purple4,
             },
           }
         : {
@@ -86,10 +90,12 @@ export const themeSettings = (mode) => {
               mediumMain: colorTokens.grey[400],
               medium: colorTokens.grey[300],
               light: colorTokens.grey[50],
+              purple:colorTokens2.black,
             },
             background: {
               default: colorTokens.grey[10],
               alt: colorTokens.grey[0],
+              ctrl:colorTokens2.purple4,
             },
           }),
     },

@@ -36,8 +36,8 @@ const MyPostWidget = ({ picturePath }) => {
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
   const mediumMain = palette.neutral.mediumMain;
   const medium = palette.neutral.medium;
-  const primaryLight = palette.primary.dark;
-  const primaryPurple = palette.primary.purple;
+  // const primaryLight = palette.primary.dark;
+  // const primaryPurple = palette.primary.purple;
   // const BASE_URL = "https://social-pvx3.onrender.com";
 
   const handlePost = async () => {
@@ -155,8 +155,8 @@ const MyPostWidget = ({ picturePath }) => {
           onClick={handlePost}
           sx={{
             cursor:'pointer',
-            color: primaryLight,
-            backgroundColor:primaryPurple,
+            color: palette.primary.purple,
+            "&:hover": { color: palette.primary.purple, backgroundColor:palette.neutral.light},
             borderRadius: "3rem",
           }}
         >

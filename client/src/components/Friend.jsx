@@ -15,7 +15,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const friends = useSelector((state) => state.user.friends);
 
   const { palette } = useTheme();
-  const primaryLight = palette.primary.light;
+  const primaryLight = palette.neutral.purple;
   const primaryDark = palette.primary.purple;
   const main = palette.neutral.main;
   const medium = palette.neutral.medium;
@@ -53,7 +53,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
             fontWeight="500"
             sx={{
               "&:hover": {
-                color: palette.primary.light,
+                color: palette.primary.purple,
                 cursor: "pointer",
               },
             }}

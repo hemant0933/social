@@ -82,6 +82,7 @@ const Form = () => {
       setPageType("login");
     }
   };
+
   const login = async (values, onSubmitProps) => {
     //
     const loggedInResponse = await fetch(`https://backend-fuhg.onrender.com/auth/login`, {
@@ -171,7 +172,7 @@ const Form = () => {
                     Boolean(touched.occupation) && Boolean(errors.occupation)
                   }
                   helperText={touched.occupation && errors.occupation}
-                  sx={{ gridColumn: "span 2" }}
+                  sx={{ gridColumn: "span 2",  }}
                 />
                 <Box
                   gridColumn="span 4"
@@ -189,7 +190,7 @@ const Form = () => {
                     {({ getRootProps, getInputProps }) => (
                       <Box
                         {...getRootProps()}
-                        border={`2px dashed ${palette.primary.main}`}
+                        border={`2px dashed ${palette.primary.purple}`}
                         p="1rem"
                         sx={{ "&:hover": { cursor: "pointer" } }}
                       >
@@ -217,7 +218,7 @@ const Form = () => {
               name="email"
               error={Boolean(touched.email) && Boolean(errors.email)}
               helperText={touched.email && errors.email}
-              sx={{ gridColumn: "span 2" }}
+              sx={{ gridColumn: "span 2"}}
             />
 
             <TextField
@@ -239,9 +240,9 @@ const Form = () => {
                 sx={{
                   m: "2rem 0",
                   p: "1rem",
-                  backgroundColor: palette.background.main,
-                  color: palette.primary.default,
-                  "&:hover": { color: palette.primary.main },
+                  backgroundColor: palette.background.ctrl,
+                  color: palette.primary.light,
+                  "&:hover": { color: palette.primary.purple, backgroundColor:palette.neutral.light},
                 }}
               >
                 {isLogin ? "Login" : "Register"}
@@ -253,10 +254,10 @@ const Form = () => {
                 }}
                 sx={{
                   textDecoration: "underline",
-                  color: palette.primary.main,
+                  color: palette.primary.purple,
                   "&:hover": {
                     cursor: "pointer",
-                    color: palette.primary.light,
+                    color: palette.primary.dark,
                   },
                 }}
               >

@@ -12,7 +12,7 @@ import UserImage from "../../components/UserImage";
 import FlexBetween from "../../components/FlexBetween";
 import WidgetWrapper from "../../components/WidgetWrapper";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import github from "../../assets/github.svg";
 import linkedin from "../../assets/linkedin.svg";
 
@@ -27,10 +27,13 @@ const UserWidget = ({ userId, picturePath }) => {
   // const BASE_URL = process.env.REACTBASE_URL
 
   const getUser = async () => {
-    const response = await fetch(`https://backend-fuhg.onrender.com/users/${userId}`, {
-      method: "GET",
-      headers: { Authorization: `Bearer ${token}` },
-    });
+    const response = await fetch(
+      `https://backend-fuhg.onrender.com/users/${userId}`,
+      {
+        method: "GET",
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
     const data = await response.json();
     setUser(data);
   };
@@ -70,7 +73,7 @@ const UserWidget = ({ userId, picturePath }) => {
               fontWeight="500"
               sx={{
                 "&:hover": {
-                  color: palette.primary.light,
+                  color: palette.primary.purple,
                   cursor: "pointer",
                 },
               }}
@@ -133,7 +136,9 @@ const UserWidget = ({ userId, picturePath }) => {
             />
             <Box>
               <Typography color={main} fontWeight="500">
-                Linkedin
+                <Link to={"https://www.linkedin.com/in/hemant-kumar-0a9b69bb/"}>
+                  Linkedin
+                </Link>
               </Typography>
               <Typography color={medium}>Social Network</Typography>
             </Box>
@@ -152,7 +157,7 @@ const UserWidget = ({ userId, picturePath }) => {
             />
             <Box>
               <Typography color={main} fontWeight="500">
-                Github
+                <Link to={"https://github.com/hemant0933"}>Github</Link>
               </Typography>
               <Typography color={medium}>Network Platform</Typography>
             </Box>
